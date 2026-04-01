@@ -73,13 +73,15 @@ export default function LogSheet({
           <h2 className="text-2xl font-semibold">{room.name}</h2>
           <p className="mt-1 text-sm text-neutral-600">
             {formatRelativeDays(room.daysSince)}
-            {room.lastLog ? ` • Last type: ${room.lastLog.cleaning_type}` : ""}
+            {room.lastLog ? ` - Last type: ${room.lastLog.cleaning_type}` : ""}
           </p>
         </div>
 
         <div className="space-y-4">
           <div>
-            <label className="mb-2 block text-sm font-medium">Cleaning type</label>
+            <label className="mb-2 block text-sm font-medium">
+              Cleaning type
+            </label>
             <div className="flex flex-wrap gap-2">
               {CLEANING_TYPES.map((type) => (
                 <button

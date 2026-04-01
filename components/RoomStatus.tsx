@@ -15,7 +15,9 @@ export default function RoomStatus({ status, daysSince }: RoomStatusProps) {
       />
       <span>
         {STATUS_LABELS[status]}
-        {daysSince !== null ? ` • ${daysSince} day${daysSince === 1 ? "" : "s"} ago` : ""}
+        {daysSince !== null
+          ? ` - ${daysSince} day${daysSince === 1 ? "" : "s"} ago`
+          : ""}
       </span>
     </div>
   );
